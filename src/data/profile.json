@@ -1,0 +1,49 @@
+{
+  "name": "Vladi Konovalov",
+  "title": "Software Engineer",
+  "summary": "Passionate developer creating beautiful and functional web experiences",
+  "email": "your.email@example.com",
+  "social": {
+    "github": "https://github.com/VladiKonovalov",
+    "linkedin": "https://www.linkedin.com/in/vladi-konovalov/",
+    "stackoverflow": "https://stackoverflow.com/users/2347210/vladi"
+  },
+  "about": "I'm a passionate developer with a love for creating elegant solutions to complex problems. With expertise in modern web technologies, I bring ideas to life through clean code and thoughtful design. I enjoy working on projects that make a difference and continuously learning new technologies to stay at the forefront of web development.",
+  "skills": {
+    "Frontend": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+    "Backend": ["Java", "C#", "Python", "REST APIs","Spring Boot","Maven","Gradle"],
+    "Tools": ["Cursor", "Git", "Docker", "MongoDB", "MySQL","jenkins","Postman","Swagger","Jira"]
+  },
+  "experience": [
+    {
+      "company": "Matrix.",
+      "role": "Software Engineer",
+      "period": "2024 - Present",
+      "description": "Developed test automation infrastructure in C# and SQL to validate software managing medical data and imaging. Integrated automated tests into CI pipelines using Jenkins to support continuous validation and fast release cycles. Collaborated in a focused automation team to meet strict healthcare standards for performance, accuracy, and safety Using Ai tools to improve our code"
+    },
+    {
+      "company": "Radware",
+      "role": "Backend Developer",
+      "period": "2022 - 2024",
+      "description": "● Built and maintained scalable microservices with Docker, MongoDB, and RESTful APIs. ● Created internal tools and services to support developer workfl ows, including a DB verifi cation utility to detect data drift between branches and production using GitHub Copilot to accelerate development.  ● Developed multi-threaded backend features in Java 17 using Spring Boot for a cloud-based DDoS prevention platform ● Created Python scripts to streamline developer workfl ows and support CI/CD processes. ● Designed and implemented new RESTful APIs enhance performance and maintainability. ● Collaborated with cross-functional teams to deliver new product features in fast-paced agile sprints and Python."
+    },
+    {
+      "company": "Radware",
+      "role": "Lead Automation Engineer",
+      "period": "2020 - 2022",
+      "description": "Led development of API test automation infrastructure in Java 11, with Jenkins pipelines and automated reporting In cloud environment.  ● Ensured production stability by proactively fi xing critical bugs in high-availability environments. ● Reduced manual QA effort by 85% on core tests, increased test coverage, and enabled faster biweekly release cycles"
+    },
+    {
+      "company": "Here mobility",
+      "role": " Automation Engineer",
+      "period": "2018 - 2020",
+      "description": "Worked on AWS based microservices with Java & Maven.  Enhanced microservice test performance using Jenkins pipelines. Verified REST APIs using Postman and Swagger documentation. Analyzed logs and metrics via Datadog to improve system testing ,and using Python scripts."
+    },
+    {
+      "company": "Segment",
+      "role": " Full-Stack Developer",
+      "period": "2017 - 2018",
+      "description": "Worked at “Segment” as full stack developer with .Net framework As part of the R&D team. Frontend – HTML5, JavaScript, Backend C# Create and Improve queries and stored procedure in a Database such as MySQL."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Job search engine",
+    "description": "a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.",
+    "liveUrl": "https://alhaset.co.il/",
+    "repoUrl": "https://alhaset.co.il/",
+    "image": "/images/project1.jpg",
+    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"]
+  },
+  {
+    "title": "Employee Management System",
+    "description": "Employee Management System built with ASP.NET Core 8.0, featuring a clean layered architecture, comprehensive CRUD operations, and a responsive web interface",
+    "liveUrl": "https://youtu.be/0ZGwOiE8FCU",
+    "repoUrl": "https://github.com/VladiKonovalov/EmployeeManagementSystem",
+    "image": "/images/project2.jpg",
+    "technologies": ["C#","ASP.NET Core", "Html", "JavaScript", "CSS"]
+  },
+  {
+    "title": "Accessify",
+    "description": "A simple, powerful accessibility tool that makes any website more accessible for users with disabilities",
+    "liveUrl": "https://github.com/VladiKonovalov/Accessify",
+    "repoUrl": "https://github.com/VladiKonovalov/Accessify",
+    "image": "/images/project3.jpg",
+    "technologies": ["CSS", "JavaScript", "Html"]
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "A responsive portfolio website showcasing projects and skills. Built with modern web technologies and optimized for performance.",
+    "liveUrl": "https://vladikonovalov.github.io/Portfolio/",
+    "repoUrl": "https://github.com/VladiKonovalov/Portfolio",
+    "image": "/images/project4.jpg",
+    "technologies": ["React", "Vite", "Tailwind CSS"]
+  },
+  {
+    "title": "Appium Login With Python",
+    "description": "This project demonstrates automated testing of a login functionality using Appium and Selenium. The tests are designed to run on an Android device using the Chrome browser",
+    "liveUrl": "https://github.com/VladiKonovalov/AppiumLoginWithPython",
+    "repoUrl": "https://github.com/username/dashboard",
+    "image": "/images/project5.jpg",
+    "technologies": ["Python", "Appium"]
+  }
+]
