@@ -154,10 +154,7 @@ Edit `index.html` to update SEO meta tags:
 
 ### Initial Setup
 
-1. **Update the base path** in `vite.config.js`:
-   ```javascript
-   base: '/Portfolio/', // Change 'Portfolio' to your repository name
-   ```
+1. **Base path is configured** in `vite.config.js` for root deployment (`base: '/'`)
 
 2. **Update SEO meta tags** in `index.html` with your actual URLs
 
@@ -173,12 +170,12 @@ Edit `index.html` to update SEO meta tags:
 
 ### GitHub Repository Settings
 
-1. Go to your repository on GitHub
+1. Go to your repository on GitHub (`vladikonovalov.github.io`)
 2. Navigate to **Settings** → **Pages**
 3. Under **Source**, select the `gh-pages` branch
 4. Click **Save**
 
-Your site will be available at `https://yourusername.github.io/Portfolio/`
+Your site will be available at `https://vladikonovalov.github.io/`
 
 ### Updating Your Site
 
