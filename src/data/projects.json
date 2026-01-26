@@ -26,16 +26,16 @@
   {
     "title": "Portfolio Website",
     "description": "A responsive portfolio website showcasing projects and skills. Built with modern web technologies and optimized for performance.",
-    "liveUrl": "https://vladikonovalov.github.io/Portfolio/",
-    "repoUrl": "https://github.com/VladiKonovalov/Portfolio",
+    "liveUrl": "https://vladikonovalov.github.io/",
+    "repoUrl": "https://github.com/VladiKonovalov/vladikonovalov.github.io",
     "image": "/images/project4.jpg",
     "technologies": ["React", "Vite", "Tailwind CSS"]
   },
   {
     "title": "Appium Login With Python",
     "description": "This project demonstrates automated testing of a login functionality using Appium and Selenium. The tests are designed to run on an Android device using the Chrome browser",
-    "liveUrl": "https://github.com/VladiKonovalov/AppiumLoginWithPython",
-    "repoUrl": "https://github.com/username/dashboard",
+    "liveUrl": "https://www.youtube.com/watch?v=Q9EZr5nWmqY",
+    "repoUrl": "https://github.com/VladiKonovalov/AppiumLoginWithPython",
     "image": "/images/project5.jpg",
     "technologies": ["Python", "Appium"]
   }

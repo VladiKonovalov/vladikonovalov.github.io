@@ -1,9 +1,36 @@
 import { useState, useRef, useEffect } from 'react'
 
+// Helper function to extract YouTube video ID from URL
+const getYouTubeVideoId = (url) => {
+  if (!url) return null
+  
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+    /youtube\.com\/watch\?.*v=([^&\n?#]+)/
+  ]
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern)
+    if (match) return match[1]
+  }
+  
+  return null
+}
+
+// Helper function to check if URL is a YouTube URL
+const isYouTubeUrl = (url) => {
+  if (!url) return false
+  return /youtube\.com|youtu\.be/.test(url)
+}
+
 export default function ProjectCard({ project }) {
   const [isVisible, setIsVisible] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
   const cardRef = useRef(null)
+  const youtubeVideoId = project.liveUrl ? getYouTubeVideoId(project.liveUrl) : null
+  const hasYouTube = !!youtubeVideoId
+  // Prioritize YouTube if YouTube URL exists
+  const showYouTube = hasYouTube
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,7 +58,19 @@ export default function ProjectCard({ project }) {
       }`}
     >
       <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
-        {project.image && (
+        {showYouTube ? (
+          <div className="w-full h-full">
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+              title={project.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        ) : project.image ? (
           <>
             {!imageLoaded && (
               <div className="absolute inset-0 bg-gray-300 dark:bg-gray-600 animate-pulse" />
@@ -46,8 +85,7 @@ export default function ProjectCard({ project }) {
               onLoad={() => setImageLoaded(true)}
             />
           </>
-        )}
-        {!project.image && (
+        ) : (
           <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500">
             <svg
               className="w-16 h-16"
@@ -92,7 +130,7 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className="btn-primary text-sm"
             >
-              Live Demo
+              {isYouTubeUrl(project.liveUrl) ? 'Watch on YouTube' : 'Live Demo'}
             </a>
           )}
           {project.repoUrl && (

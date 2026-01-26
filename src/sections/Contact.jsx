@@ -1,6 +1,15 @@
+import { useState } from 'react'
 import profileData from '../data/profile.json'
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  const copyPhoneNumber = () => {
+    navigator.clipboard.writeText(profileData.phone)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <section id="contact" className="section-container bg-white dark:bg-gray-900">
       <h2 className="section-title">Get In Touch</h2>
@@ -10,11 +19,22 @@ export default function Contact() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href={`mailto:${profileData.email}`}
+            href={profileData.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary inline-block"
           >
-            Send Email
+            Visit LinkedIn
           </a>
+          {profileData.phone && (
+            <button
+              onClick={copyPhoneNumber}
+              className="btn-secondary inline-block relative"
+              title={`Phone: ${profileData.phone}`}
+            >
+              {copied ? 'Copied!' : `📞 ${profileData.phone}`}
+            </button>
+          )}
           <a
             href={profileData.social.github}
             target="_blank"
