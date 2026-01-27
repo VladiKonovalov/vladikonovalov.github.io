@@ -27,7 +27,10 @@ export default function ProjectCard({ project }) {
   const [isVisible, setIsVisible] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
   const cardRef = useRef(null)
-  const youtubeVideoId = project.liveUrl ? getYouTubeVideoId(project.liveUrl) : null
+  // Check both liveUrl and image fields for YouTube URLs
+  const youtubeVideoIdFromLiveUrl = project.liveUrl ? getYouTubeVideoId(project.liveUrl) : null
+  const youtubeVideoIdFromImage = project.image ? getYouTubeVideoId(project.image) : null
+  const youtubeVideoId = youtubeVideoIdFromLiveUrl || youtubeVideoIdFromImage
   const hasYouTube = !!youtubeVideoId
   // Prioritize YouTube if YouTube URL exists
   const showYouTube = hasYouTube

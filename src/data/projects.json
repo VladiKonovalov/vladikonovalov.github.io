@@ -18,9 +18,9 @@
   {
     "title": "Accessify",
     "description": "A simple, powerful accessibility tool that makes any website more accessible for users with disabilities",
-    "liveUrl": "https://github.com/VladiKonovalov/Accessify",
+    "liveUrl": "https://vladikonovalov.github.io/Accessify/accessify-integration.html",
     "repoUrl": "https://github.com/VladiKonovalov/Accessify",
-    "image": "/images/project3.jpg",
+    "image": "https://www.youtube.com/watch?v=cimDdARp5KM",
     "technologies": ["CSS", "JavaScript", "Html"]
   },
   {
