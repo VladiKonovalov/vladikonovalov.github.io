@@ -26,6 +26,7 @@ const isYouTubeUrl = (url) => {
 export default function ProjectCard({ project }) {
   const [isVisible, setIsVisible] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
+  const [youtubeLoaded, setYoutubeLoaded] = useState(false)
   const cardRef = useRef(null)
   // Check both liveUrl and image fields for YouTube URLs
   const youtubeVideoIdFromLiveUrl = project.liveUrl ? getYouTubeVideoId(project.liveUrl) : null
@@ -62,15 +63,21 @@ export default function ProjectCard({ project }) {
     >
       <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
         {showYouTube ? (
-          <div className="w-full h-full">
+          <div className="w-full h-full relative">
+            {!youtubeLoaded && (
+              <div className="absolute inset-0 bg-gray-300 dark:bg-gray-600 animate-pulse flex items-center justify-center z-10">
+                <div className="text-gray-500 dark:text-gray-400 text-sm">Loading video...</div>
+              </div>
+            )}
             <iframe
               className="w-full h-full"
-              src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+              src={`https://www.youtube-nocookie.com/embed/${youtubeVideoId}?modestbranding=1&rel=0`}
               title={project.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               loading="lazy"
+              onLoad={() => setYoutubeLoaded(true)}
             />
           </div>
         ) : project.image ? (

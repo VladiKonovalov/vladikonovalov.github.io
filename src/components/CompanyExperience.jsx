@@ -45,14 +45,9 @@ export default function CompanyExperience({ company, experiences, isLast }) {
         <div className="space-y-4">
           {sortedExperiences.map((exp, index) => (
             <div key={index} className={index > 0 ? "pt-4 border-t border-gray-200 dark:border-gray-700" : ""}>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {exp.role}
-                </h3>
-                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                  {exp.period}
-                </span>
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                {exp.role}
+              </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 {exp.description}
               </p>
