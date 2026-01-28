@@ -29,7 +29,7 @@
     "description": "A responsive portfolio website showcasing projects and skills. Built with modern web technologies and optimized for performance.",
     "liveUrl": "https://vladikonovalov.github.io/",
     "repoUrl": "https://github.com/VladiKonovalov/vladikonovalov.github.io",
-    "image": "/images/project4.jpg",
+    "image": "/public/icon.png",
     "technologies": ["React", "Vite", "Tailwind CSS"]
   },
   {
