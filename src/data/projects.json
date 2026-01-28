@@ -1,13 +1,5 @@
 [
   {
-    "title": "Job search engine",
-    "description": "a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.",
-    "liveUrl": "https://alhaset.co.il/",
-    "repoUrl": "https://alhaset.co.il/",
-    "image": "/images/project1.jpg",
-    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"]
-  },
-  {
     "title": "Employee Management System",
     "description": "Employee Management System built with ASP.NET Core 8.0, featuring a clean layered architecture, comprehensive CRUD operations, and a responsive web interface",
     "liveUrl": "https://youtu.be/0ZGwOiE8FCU",
@@ -22,6 +14,14 @@
     "repoUrl": "https://github.com/VladiKonovalov/Accessify",
     "image": "https://www.youtube.com/watch?v=cimDdARp5KM",
     "technologies": ["CSS", "JavaScript", "Html"]
+  },
+  {
+    "title": "Job search engine",
+    "description": "a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.",
+    "liveUrl": "https://alhaset.co.il/",
+    "repoUrl": "https://alhaset.co.il/",
+    "image": "/images/project1.jpg",
+    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"]
   },
   {
     "title": "Portfolio Website",
