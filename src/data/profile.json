@@ -1,7 +1,7 @@
 {
   "name": "Vladi Konovalov",
   "title": "Software Engineer",
-  "summary": "Passionate developer creating beautiful and functional web experiences",
+  "summary": "Software Engineer building scalable systems, APIs, and automation solutions",
   "email": "your.email@example.com",
   "phone": "054-884-2059",
   "social": {
@@ -13,7 +13,9 @@
   "skills": {
     "Frontend": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
     "Backend": ["Java", "C#", "Python", "REST APIs","Spring Boot","Maven","Gradle"],
-    "Tools": ["Cursor", "Git", "Docker", "MongoDB", "MySQL","jenkins","Postman","Swagger","Jira"]
+    "Databases": ["MongoDB", "MySQL"],
+    "DevOps & Infrastructure": ["Jenkins", "Docker", "Git", "GitHub", "GitHub Actions", "GitHub Pages"],
+    "Development & Workflow Tools": ["Cursor", "Git", "Docker","Jenkins","Postman","Swagger","Jira"]
   },
   "experience": [
     {
@@ -26,13 +28,13 @@
       "company": "Radware",
       "role": "Backend Developer",
       "period": "2022 - 2024",
-      "description": "● Built and maintained scalable microservices with Docker, MongoDB, and RESTful APIs. ● Created internal tools and services to support developer workfl ows, including a DB verifi cation utility to detect data drift between branches and production using GitHub Copilot to accelerate development.  ● Developed multi-threaded backend features in Java 17 using Spring Boot for a cloud-based DDoS prevention platform ● Created Python scripts to streamline developer workfl ows and support CI/CD processes. ● Designed and implemented new RESTful APIs enhance performance and maintainability. ● Collaborated with cross-functional teams to deliver new product features in fast-paced agile sprints and Python."
+      "description": "Built and maintained scalable microservices with Docker, MongoDB, and RESTful APIs. Created internal tools and services to support developer workflows, including a DB verification utility to detect data drift between branches and production using GitHub Copilot to accelerate development. Developed multi-threaded backend features in Java using Spring Boot for a cloud-based DDoS prevention platform. Created Python scripts to streamline developer workflows and support CI/CD processes. Designed and implemented new RESTful APIs to enhance performance and maintainability. Collaborated with cross-functional teams to deliver new product features in fast-paced agile sprints using Python."
     },
     {
       "company": "Radware",
-      "role": "Lead Automation Engineer",
+      "role": "Senior Automation Engineer / Project Owner",
       "period": "2020 - 2022",
-      "description": "Led development of API test automation infrastructure in Java 11, with Jenkins pipelines and automated reporting In cloud environment.  ● Ensured production stability by proactively fi xing critical bugs in high-availability environments. ● Reduced manual QA effort by 85% on core tests, increased test coverage, and enabled faster biweekly release cycles"
+      "description": "Designed and built an API test automation infrastructure from scratch in Java , with Jenkins pipelines and automated reporting in cloud environments. Mentored a new team member to contribute effectively. Ensured production stability by proactively fixing critical bugs in high-availability systems. Reduced manual QA effort by 85% on core tests, increased test coverage, and enabled faster biweekly release cycles."
     },
     {
       "company": "Here mobility",
@@ -45,6 +47,12 @@
       "role": " Full-Stack Developer",
       "period": "2017 - 2018",
       "description": "Worked at “Segment” as full stack developer with .Net framework As part of the R&D team. Frontend – HTML5, JavaScript, Backend C# Create and Improve queries and stored procedure in a Database such as MySQL."
+    },
+    {
+      "company": "Docusign",
+      "role": " Full-Stack Developer",
+      "period": "2016 - 2015",
+      "description": "Worked as a Manual QA Engineer, performing functional and regression testing of electronic and digital signature products. Utilized VMware environments and SQLite databases to replicate user scenarios and validate data integrity. Executed detailed test cases, reported bugs, and collaborated with development teams to ensure high-quality product releases."
     }
   ]
 }
