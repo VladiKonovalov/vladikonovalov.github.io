@@ -132,13 +132,13 @@ export default function ProjectCard({ project }) {
             ))}
           </div>
         )}
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
               target={project.isCurrentSite ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className={`text-sm ${
+              className={`text-sm flex-shrink-0 inline-flex items-center justify-center ${
                 project.isCurrentSite
                   ? 'btn-primary opacity-75 cursor-default pointer-events-none bg-primary-600 dark:bg-primary-700'
                   : 'btn-primary'
@@ -152,7 +152,7 @@ export default function ProjectCard({ project }) {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-sm"
+              className="btn-secondary text-sm flex-shrink-0 inline-flex items-center justify-center"
             >
               Code
             </a>
