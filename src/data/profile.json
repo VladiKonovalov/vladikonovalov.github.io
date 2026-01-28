@@ -15,7 +15,7 @@
     "Backend": ["Java", "C#", "Python", "REST APIs","Spring Boot","Maven","Gradle"],
     "Databases": ["MongoDB", "MySQL"],
     "DevOps & Infrastructure": ["Jenkins", "Docker", "Git", "GitHub", "GitHub Actions", "GitHub Pages"],
-    "Development & Workflow Tools": ["Cursor","Copilot", "Postman","Swagger","Jira"]
+    "Development & Workflow Tools": ["Cursor","Copilot", "Postman","Swagger","Jira","N8N"]
   },
   "experience": [
     {

@@ -22,7 +22,8 @@
     "liveUrl": "https://alhaset.co.il/",
     "repoUrl": "https://alhaset.co.il/",
     "image": "/images/project1.jpg",
-    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"]
+    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"],
+    "repoPrivate": true
   },
   {
     "title": "Portfolio Website",
@@ -30,7 +31,8 @@
     "liveUrl": "https://vladikonovalov.github.io/",
     "repoUrl": "https://github.com/VladiKonovalov/vladikonovalov.github.io",
     "image": "/icon.png",
-    "technologies": ["React", "Vite", "Tailwind CSS"]
+    "technologies": ["React", "Vite", "Tailwind CSS"],
+    "isCurrentSite": true
   },
   {
     "title": "Appium Login With Python",

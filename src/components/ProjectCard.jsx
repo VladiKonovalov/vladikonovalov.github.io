@@ -136,14 +136,18 @@ export default function ProjectCard({ project }) {
           {project.liveUrl && (
             <a
               href={project.liveUrl}
-              target="_blank"
+              target={project.isCurrentSite ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className="btn-primary text-sm"
+              className={`text-sm ${
+                project.isCurrentSite
+                  ? 'btn-primary opacity-75 cursor-default pointer-events-none bg-primary-600 dark:bg-primary-700'
+                  : 'btn-primary'
+              }`}
             >
               {isYouTubeUrl(project.liveUrl) ? 'Watch on YouTube' : 'Live Demo'}
             </a>
           )}
-          {project.repoUrl && (
+          {project.repoUrl && !project.repoPrivate && (
             <a
               href={project.repoUrl}
               target="_blank"
