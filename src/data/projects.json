@@ -1,4 +1,5 @@
 [
+
   {
     "title": "Employee Management System",
     "description": "Employee Management System built with ASP.NET Core 8.0, featuring a clean layered architecture, comprehensive CRUD operations, and a responsive web interface",
@@ -15,7 +16,7 @@
     "image": "https://www.youtube.com/watch?v=cimDdARp5KM",
     "technologies": ["CSS", "JavaScript", "Html"]
   },
-  {
+    {
     "title": "Job search engine",
     "description": "a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.",
     "liveUrl": "https://alhaset.co.il/",
