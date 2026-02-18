@@ -1,15 +1,7 @@
-import { useState } from 'react'
 import profileData from '../data/profile.json'
+import ContactForm from '../components/ContactForm'
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false)
-
-  const copyPhoneNumber = () => {
-    navigator.clipboard.writeText(profileData.phone)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <section id="contact" className="section-container bg-white dark:bg-gray-900">
       <h2 className="section-title">Get In Touch</h2>
@@ -17,7 +9,8 @@ export default function Contact() {
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+          <ContactForm />
           <a
             href={profileData.social.linkedin}
             target="_blank"
@@ -29,15 +22,6 @@ export default function Contact() {
             </svg>
             Visit LinkedIn
           </a>
-          {profileData.phone && (
-            <button
-              onClick={copyPhoneNumber}
-              className="btn-secondary inline-block relative"
-              title={`Phone: ${profileData.phone}`}
-            >
-              {copied ? 'Copied!' : `📞 ${profileData.phone}`}
-            </button>
-          )}
           <a
             href={profileData.social.github}
             target="_blank"
