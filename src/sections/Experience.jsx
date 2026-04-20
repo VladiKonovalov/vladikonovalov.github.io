@@ -1,9 +1,17 @@
 import CompanyExperience from '../components/CompanyExperience'
 import profileData from '../data/profile.json'
+import { useI18n } from '../i18n/useI18n'
 
 export default function Experience() {
+  const { t } = useI18n()
+
+  const experiencesWithIds = profileData.experience.map((exp, index) => ({
+    ...exp,
+    _i18nId: `exp${index}`,
+  }))
+
   // Group experiences by company
-  const groupedExperiences = profileData.experience.reduce((acc, exp) => {
+  const groupedExperiences = experiencesWithIds.reduce((acc, exp) => {
     const company = exp.company.trim();
     if (!acc[company]) {
       acc[company] = [];
@@ -25,7 +33,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="section-container bg-white dark:bg-gray-900">
-      <h2 className="section-title">Experience</h2>
+      <h2 className="section-title">{t('sections.experience')}</h2>
       <div className="max-w-3xl mx-auto">
         {companies.map(([company, experiences], index) => (
           <CompanyExperience

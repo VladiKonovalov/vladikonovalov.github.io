@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
+import { useI18n } from '../i18n/useI18n'
 
 // Replace with your Cloudflare Worker URL, e.g. https://your-worker-name.workers.dev
 const CONTACT_ENDPOINT = 'https://portfolio-contact-api.vladi-konov.workers.dev'
@@ -8,12 +9,12 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const defaultForm = { name: '', email: '', message: '' }
 const defaultErrors = { name: '', email: '', message: '' }
 
-function validate(form) {
+function validate(form, t) {
   const errors = { ...defaultErrors }
-  if (!form.name.trim()) errors.name = 'Name is required'
-  if (!form.email.trim()) errors.email = 'Email is required'
-  else if (!EMAIL_REGEX.test(form.email)) errors.email = 'Please enter a valid email'
-  if (!form.message.trim()) errors.message = 'Message is required'
+  if (!form.name.trim()) errors.name = t('contactForm.errors.nameRequired')
+  if (!form.email.trim()) errors.email = t('contactForm.errors.emailRequired')
+  else if (!EMAIL_REGEX.test(form.email)) errors.email = t('contactForm.errors.emailInvalid')
+  if (!form.message.trim()) errors.message = t('contactForm.errors.messageRequired')
   return errors
 }
 
@@ -22,6 +23,7 @@ function hasErrors(errors) {
 }
 
 export default function ContactForm() {
+  const { t, isRTL } = useI18n()
   const [isOpen, setIsOpen] = useState(false)
   const [form, setForm] = useState(defaultForm)
   const [errors, setErrors] = useState(defaultErrors)
@@ -44,7 +46,7 @@ export default function ContactForm() {
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault()
-      const nextErrors = validate(form)
+      const nextErrors = validate(form, t)
       setErrors(nextErrors)
       if (hasErrors(nextErrors)) return
 
@@ -67,7 +69,7 @@ export default function ContactForm() {
         setIsSubmitting(false)
       }
     },
-    [form, closeModal]
+    [form, closeModal, t]
   )
 
   useEffect(() => {
@@ -107,12 +109,12 @@ export default function ContactForm() {
         type="button"
         onClick={() => setIsOpen(true)}
         className="btn-primary inline-flex items-center justify-center gap-2 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-        aria-label="Open contact form"
+        aria-label={t('contactForm.openAria')}
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
-        Contact Me
+        {t('contactForm.openButton')}
       </button>
 
       {isOpen && (
@@ -129,19 +131,19 @@ export default function ContactForm() {
           >
             <div className="p-6 sm:p-8">
               <h3 id="contact-form-title" className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-                Send a message
+                {t('contactForm.title')}
               </h3>
 
               {submitStatus === 'success' ? (
                 <div className="py-6 text-center animate-fade-in">
-                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-1">Message sent!</p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">Thanks for reaching out. I&apos;ll get back to you soon.</p>
+                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-1">{t('contactForm.successTitle')}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t('contactForm.successBody')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                   <div>
                     <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                      Name
+                      {t('contactForm.labels.name')}
                     </label>
                     <input
                       id="contact-name"
@@ -153,15 +155,16 @@ export default function ContactForm() {
                       className={`w-full px-4 py-2.5 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                         errors.name ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
-                      placeholder="Your name"
+                      placeholder={t('contactForm.placeholders.name')}
                       disabled={isSubmitting}
+                      dir={isRTL ? 'rtl' : 'ltr'}
                     />
                     {errors.name && <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.name}</p>}
                   </div>
 
                   <div>
                     <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                      Email
+                      {t('contactForm.labels.email')}
                     </label>
                     <input
                       id="contact-email"
@@ -173,15 +176,16 @@ export default function ContactForm() {
                       className={`w-full px-4 py-2.5 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                         errors.email ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
-                      placeholder="you@example.com"
+                      placeholder={t('contactForm.placeholders.email')}
                       disabled={isSubmitting}
+                      dir="ltr"
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.email}</p>}
                   </div>
 
                   <div>
                     <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                      Message
+                      {t('contactForm.labels.message')}
                     </label>
                     <textarea
                       id="contact-message"
@@ -192,15 +196,16 @@ export default function ContactForm() {
                       className={`w-full px-4 py-2.5 rounded-lg border bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none ${
                         errors.message ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
-                      placeholder="Your message..."
+                      placeholder={t('contactForm.placeholders.message')}
                       disabled={isSubmitting}
+                      dir={isRTL ? 'rtl' : 'ltr'}
                     />
                     {errors.message && <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.message}</p>}
                   </div>
 
                   {submitStatus === 'error' && (
                     <p className="text-sm text-red-500 dark:text-red-400">
-                      Something went wrong. Please try again or reach out via the links below.
+                      {t('contactForm.errors.sendFailed')}
                     </p>
                   )}
 
@@ -211,14 +216,14 @@ export default function ContactForm() {
                       className="btn-secondary flex-1 rounded-xl"
                       disabled={isSubmitting}
                     >
-                      Cancel
+                      {t('contactForm.actions.cancel')}
                     </button>
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className="flex-1 px-6 py-3 bg-primary-600 hover:bg-primary-700 disabled:opacity-70 disabled:cursor-not-allowed text-white rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send'}
+                      {isSubmitting ? t('contactForm.actions.sending') : t('contactForm.actions.send')}
                     </button>
                   </div>
                 </form>

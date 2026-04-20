@@ -1,6 +1,9 @@
 import profileData from '../data/profile.json'
+import { useI18n } from '../i18n/useI18n'
 
 export default function Hero() {
+  const { t } = useI18n()
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -37,23 +40,23 @@ export default function Hero() {
             {profileData.name}
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-primary-600 dark:text-primary-400 font-semibold mb-6">
-            {profileData.title}
+            {t('profile.title')}
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            {profileData.summary}
+            {t('profile.summary')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('projects')}
               className="btn-primary"
             >
-              View My Work
+              {t('hero.viewWork')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-secondary"
             >
-              Get In Touch
+              {t('hero.getInTouch')}
             </button>
           </div>
         </div>

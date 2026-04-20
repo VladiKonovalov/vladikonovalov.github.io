@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import ThemeToggle from './ThemeToggle'
+import LanguageToggle from './LanguageToggle'
+import { useI18n } from '../i18n/useI18n'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t, isRTL } = useI18n()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +32,12 @@ export default function Navbar() {
   }
 
   const navLinks = [
-    { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'hero', label: t('nav.home') },
+    { id: 'about', label: t('nav.about') },
+    { id: 'skills', label: t('nav.skills') },
+    { id: 'experience', label: t('nav.experience') },
+    { id: 'projects', label: t('nav.projects') },
+    { id: 'contact', label: t('nav.contact') },
   ]
 
   return (
@@ -51,11 +54,11 @@ export default function Navbar() {
             onClick={() => scrollToSection('hero')}
             className="text-xl font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
           >
-            Portfolio
+            {t('nav.brand')}
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className={`hidden md:flex items-center space-x-6 ${isRTL ? 'space-x-reverse' : ''}`}>
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -65,16 +68,18 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+            <LanguageToggle />
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className={`md:hidden flex items-center space-x-2 ${isRTL ? 'space-x-reverse' : ''}`}>
+            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-              aria-label="Toggle menu"
+              aria-label={t('nav.mobileMenuAria')}
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-gray-100"
@@ -109,7 +114,9 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                className={`block w-full px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors ${
+                  isRTL ? 'text-right' : 'text-left'
+                }`}
               >
                 {link.label}
               </button>

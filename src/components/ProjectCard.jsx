@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { useI18n } from '../i18n/useI18n'
 
 // Helper function to extract YouTube video ID from URL
 const getYouTubeVideoId = (url) => {
@@ -24,6 +25,7 @@ const isYouTubeUrl = (url) => {
 }
 
 export default function ProjectCard({ project }) {
+  const { t } = useI18n()
   const [isVisible, setIsVisible] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
   const [youtubeLoaded, setYoutubeLoaded] = useState(false)
@@ -66,7 +68,7 @@ export default function ProjectCard({ project }) {
           <div className="w-full h-full relative">
             {!youtubeLoaded && (
               <div className="absolute inset-0 bg-gray-300 dark:bg-gray-600 animate-pulse flex items-center justify-center z-10">
-                <div className="text-gray-500 dark:text-gray-400 text-sm">Loading video...</div>
+                <div className="text-gray-500 dark:text-gray-400 text-sm">{t('projectCard.loadingVideo')}</div>
               </div>
             )}
             <iframe
@@ -118,7 +120,11 @@ export default function ProjectCard({ project }) {
           {project.title}
         </h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
-          {project.description}
+          {(() => {
+            const key = `projects.items.${project._i18nId}.description`
+            const translated = t(key)
+            return translated === key ? project.description : translated
+          })()}
         </p>
         {project.technologies && project.technologies.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
@@ -144,7 +150,7 @@ export default function ProjectCard({ project }) {
                   : 'btn-primary'
               }`}
             >
-              {isYouTubeUrl(project.liveUrl) ? 'Watch on YouTube' : 'Live Demo'}
+              {isYouTubeUrl(project.liveUrl) ? t('projectCard.watchOnYouTube') : t('projectCard.liveDemo')}
             </a>
           )}
           {project.repoUrl && !project.repoPrivate && (
@@ -154,7 +160,7 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className="btn-secondary text-sm flex-shrink-0 inline-flex items-center justify-center"
             >
-              Code
+              {t('projectCard.code')}
             </a>
           )}
         </div>

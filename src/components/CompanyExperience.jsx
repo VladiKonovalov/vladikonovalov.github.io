@@ -1,4 +1,8 @@
+import { useI18n } from '../i18n/useI18n'
+
 export default function CompanyExperience({ company, experiences, isLast }) {
+  const { t } = useI18n()
+
   // Sort experiences by period (most recent first)
   const sortedExperiences = [...experiences].sort((a, b) => {
     // Extract start year from period (e.g., "2022 - 2024" -> 2022)
@@ -20,7 +24,7 @@ export default function CompanyExperience({ company, experiences, isLast }) {
     const maxYear = Math.max(...years);
     const latestPeriod = sortedExperiences[0].period;
     const isPresent = latestPeriod.includes('Present');
-    return `${minYear} - ${isPresent ? 'Present' : maxYear}`;
+    return `${minYear} - ${isPresent ? t('experience.present') : maxYear}`;
   };
 
   return (
@@ -46,10 +50,10 @@ export default function CompanyExperience({ company, experiences, isLast }) {
           {sortedExperiences.map((exp, index) => (
             <div key={index} className={index > 0 ? "pt-4 border-t border-gray-200 dark:border-gray-700" : ""}>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                {exp.role}
+                {t(`experience.items.${exp._i18nId}.role`)}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {exp.description}
+                {t(`experience.items.${exp._i18nId}.description`)}
               </p>
             </div>
           ))}
