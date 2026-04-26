@@ -2,32 +2,32 @@
 
   {
     "title": "Employee Management System",
-    "description": "Employee Management System built with ASP.NET Core 8.0, featuring a clean layered architecture, comprehensive CRUD operations, and a responsive web interface",
+    "description": "Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment",
     "liveUrl": "https://youtu.be/0ZGwOiE8FCU",
     "repoUrl": "https://github.com/VladiKonovalov/EmployeeManagementSystem",
     "image": "/images/project2.jpg",
-    "technologies": ["C#","ASP.NET Core", "Html", "JavaScript", "CSS"]
+    "technologies": ["C#", "ASP.NET Core", "Entity Framework Core", "Docker", "Serilog", "Bootstrap", "FontAwesome", "HTML", "JavaScript", "CSS"]
   },
   {
     "title": "Accessify",
-    "description": "A simple, powerful accessibility tool that makes any website more accessible for users with disabilities",
+    "description": "Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability",
     "liveUrl": "https://vladikonovalov.github.io/Accessify/example.html",
     "repoUrl": "https://github.com/VladiKonovalov/Accessify",
     "image": "https://www.youtube.com/watch?v=yC6a5V_RaYg",
-    "technologies": ["CSS", "JavaScript", "Html"]
+    "technologies": ["JavaScript", "HTML", "CSS", "Accessibility (a11y)"]
   },
     {
-    "title": "Job search engine",
-    "description": "a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.",
+    "title": "Job Search & Talent Platform",
+    "description": "Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server",
     "liveUrl": "https://alhaset.co.il/",
     "repoUrl": "https://alhaset.co.il/",
     "image": "/images/project1.jpg",
-    "technologies": ["Java", "Spring Boot","JavaScript", "MongoDB", "Stripe"],
+    "technologies": ["Java", "Spring Boot", "Docker", "JavaScript", "MongoDB", "Stripe"],
     "repoPrivate": true
   },
   {
     "title": "Portfolio Website",
-    "description": "A responsive portfolio website showcasing projects and skills. Built with modern web technologies and optimized for performance.",
+    "description": "Developed a modern, responsive portfolio website using React, Vite, and Tailwind CSS, designed to showcase projects and technical skills with a focus on performance, accessibility, and user experience.\n\nKey Features:\n\n• Dark/light mode with persistent user preferences\n• Fully responsive, mobile-first design across all screen sizes\n• Smooth scrolling navigation with subtle animations and transitions\n• Lazy loading for images and sections to improve performance\n• SEO optimization including meta tags, Open Graph, and social sharing support\n• Accessible design using semantic HTML and ARIA attributes\n\nTechnical Highlights:\n\n• Built with React 18 and optimized using Vite for fast load times\n• Styled with Tailwind CSS for scalable and maintainable UI development\n• Deployed via GitHub Pages with automated build configuration\n• Focused on performance optimization and clean component structure",
     "liveUrl": "https://vladikonovalov.github.io/",
     "repoUrl": "https://github.com/VladiKonovalov/vladikonovalov.github.io",
     "image": "/icon.png",

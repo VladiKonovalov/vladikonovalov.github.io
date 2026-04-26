@@ -88,19 +88,20 @@ export const translations = {
       items: {
         p0: {
           description:
-            'Employee Management System built with ASP.NET Core 8.0, featuring a clean layered architecture, comprehensive CRUD operations, and a responsive web interface',
+            'Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment',
         },
         p1: {
           description:
-            'A simple, powerful accessibility tool that makes any website more accessible for users with disabilities',
+            'Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability',
         },
         p2: {
+          title: 'Job Search & Talent Platform',
           description:
-            'a job search engine that allows users to search for jobs by location, title.also allow company publish jobs and manage them.',
+            'Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server',
         },
         p3: {
           description:
-            'A responsive portfolio website showcasing projects and skills. Built with modern web technologies and optimized for performance.',
+            'Developed a modern, responsive portfolio website using React, Vite, and Tailwind CSS, designed to showcase projects and technical skills with a focus on performance, accessibility, and user experience.\n\nKey Features:\n\n• Dark/light mode with persistent user preferences\n• Fully responsive, mobile-first design across all screen sizes\n• Smooth scrolling navigation with subtle animations and transitions\n• Lazy loading for images and sections to improve performance\n• SEO optimization including meta tags, Open Graph, and social sharing support\n• Accessible design using semantic HTML and ARIA attributes\n\nTechnical Highlights:\n\n• Built with React 18 and optimized using Vite for fast load times\n• Styled with Tailwind CSS for scalable and maintainable UI development\n• Deployed via GitHub Pages with automated build configuration\n• Focused on performance optimization and clean component structure',
         },
         p4: {
           description:
@@ -233,19 +234,20 @@ export const translations = {
       items: {
         p0: {
           description:
-            'מערכת לניהול עובדים שנבנתה ב־ASP.NET Core 8.0, עם ארכיטקטורה שכבתית נקייה, פעולות CRUD מלאות וממשק ווב רספונסיבי.',
+            'פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.\n\nתכונות עיקריות:\n\n• CRUD לעובדים ולמחלקות, כולל ולידציות וטיפול בקשרים בין ישויות\n• חיפוש, סינון, מיון ועימוד (Pagination) למאגרי נתונים גדולים\n• דשבורד לתובנות וסטטיסטיקות מערכת\n• UI רספונסיבי עם Bootstrap ו־FontAwesome\n• תשתיות מוכנות לפרודקשן: EF Core, לוגים עם Serilog, דיפלוי באמצעות Docker',
         },
         p1: {
           description:
-            'כלי נגישות פשוט ועוצמתי שהופך כל אתר לנגיש יותר עבור משתמשים עם מוגבלויות.',
+            'פיתחתי כלי נגישות קל משקל שנועד לשפר את השימושיות של אתרים עבור משתמשים עם מוגבלויות. הפתרון מספק התאמות UI דינמיות שמשפרות קריאות וניווט, ללא צורך בשינויים בקוד של האתר המקורי.\n\nתכונות עיקריות:\n\n• התאמות נגישות בזמן אמת (לדוגמה: גודל טקסט, ניגודיות, חדות/בהירות)\n• ממשק ידידותי להתאמה מהירה של העדפות תצוגה\n• עובד כשכבת Overlay, כך שניתן לשלב אותו באתרים קיימים\n• דגש על שיפור השימושיות עבור משתמשים עם לקויות ראייה\n\nדגשים טכניים:\n\n• תוכנן כפתרון צד־לקוח גמיש לשילוב קל\n• דגש על ביצועים והשפעה מינימלית על זמן טעינת העמוד\n• נבנה תוך התמקדות בפשטות ובשימושיות פרקטית',
         },
         p2: {
+          title: 'פלטפורמת חיפוש עבודה ושוק טאלנטים',
           description:
-            'מנוע חיפוש עבודה שמאפשר למשתמשים לחפש משרות לפי מיקום ותפקיד. בנוסף מאפשר לחברות לפרסם משרות ולנהל אותן.',
+            'פלטפורמת חיפוש עבודה מקצה־לקצה שמאפשרת למחפשי עבודה לגלות משרות ולהגיש מועמדות, ובמקביל מאפשרת למגייסים לפרסם, לנהל ולעקוב אחר מודעות דרושים. המערכת כוללת בקרת הרשאות לפי תפקיד (מחפשי עבודה, מגייסים, מנהלים) ותומכת בחשיפה של מועמדים דרך מרקטפלייס ציבורי של טאלנטים.\n\nתכונות עיקריות:\n\n• אימות והרשאות מבוססי תפקיד (מחפשי עבודה, מגייסים, מנהלים)\n• חיפוש משרות מתקדם עם סינון ועימוד (מיקום, תפקיד וכו׳)\n• מערכת מעקב אחר הגשות מועמדות עבור מועמדים\n• דשבורד למגייסים לפרסום וניהול מודעות דרושים\n• עמוד “טאלנט” ציבורי שבו מועמדים נבחרים יכולים להציג את הפרופיל שלהם\n• תכנון RESTful API עם זרימת נתונים מובנית בין הלקוח לשרת',
         },
         p3: {
           description:
-            'אתר תיק עבודות רספונסיבי שמציג פרויקטים וכישורים. נבנה עם טכנולוגיות ווב מודרניות ומותאם לביצועים.',
+            'פיתחתי אתר תיק עבודות מודרני ורספונסיבי באמצעות React, Vite ו־Tailwind CSS, שנועד להציג פרויקטים וכישורים טכניים תוך דגש על ביצועים, נגישות וחוויית משתמש.\n\nתכונות עיקריות:\n\n• מצב כהה/בהיר עם שמירת העדפות משתמש באופן מתמשך\n• עיצוב רספונסיבי בגישת Mobile-first לכל גדלי המסכים\n• ניווט בגלילה חלקה עם אנימציות עדינות ומעברים\n• טעינה עצלה (Lazy loading) לתמונות ולסקשנים לשיפור ביצועים\n• אופטימיזציית SEO כולל תגיות מטא, Open Graph ותמיכה בשיתוף ברשתות חברתיות\n• עיצוב נגיש באמצעות HTML סמנטי ותכונות ARIA\n\nדגשים טכניים:\n\n• נבנה עם React 18 ואופטימיזציה באמצעות Vite לזמני טעינה מהירים\n• עוצב עם Tailwind CSS לפיתוח UI סקיילבילי וקל לתחזוקה\n• דיפלוי באמצעות GitHub Pages עם תצורת בילד אוטומטית\n• דגש על אופטימיזציית ביצועים ומבנה קומפוננטות נקי',
         },
         p4: {
           description:

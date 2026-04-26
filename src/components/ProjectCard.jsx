@@ -117,9 +117,13 @@ export default function ProjectCard({ project }) {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-          {project.title}
+          {(() => {
+            const key = `projects.items.${project._i18nId}.title`
+            const translated = t(key)
+            return translated === key ? project.title : translated
+          })()}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 whitespace-pre-line">
           {(() => {
             const key = `projects.items.${project._i18nId}.description`
             const translated = t(key)
