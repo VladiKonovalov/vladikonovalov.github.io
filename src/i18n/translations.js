@@ -87,17 +87,17 @@ export const translations = {
     projects: {
       items: {
         p0: {
+          title: 'Job Search & Talent Platform',
           description:
-            'Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment',
+            'Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server\n• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit',
         },
         p1: {
           description:
-            'Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability',
+            'Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment',
         },
         p2: {
-          title: 'Job Search & Talent Platform',
           description:
-            'Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server',
+            'Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability',
         },
         p3: {
           description:
@@ -233,17 +233,17 @@ export const translations = {
     projects: {
       items: {
         p0: {
+          title: 'פלטפורמת חיפוש עבודה ושוק טאלנטים',
           description:
-            'פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.\n\nתכונות עיקריות:\n\n• CRUD לעובדים ולמחלקות, כולל ולידציות וטיפול בקשרים בין ישויות\n• חיפוש, סינון, מיון ועימוד (Pagination) למאגרי נתונים גדולים\n• דשבורד לתובנות וסטטיסטיקות מערכת\n• UI רספונסיבי עם Bootstrap ו־FontAwesome\n• תשתיות מוכנות לפרודקשן: EF Core, לוגים עם Serilog, דיפלוי באמצעות Docker',
+            'פלטפורמת חיפוש עבודה מקצה־לקצה שמאפשרת למחפשי עבודה לגלות משרות ולהגיש מועמדות, ובמקביל מאפשרת למגייסים לפרסם, לנהל ולעקוב אחר מודעות דרושים. המערכת כוללת בקרת הרשאות לפי תפקיד (מחפשי עבודה, מגייסים, מנהלים) ותומכת בחשיפה של מועמדים דרך מרקטפלייס ציבורי של טאלנטים.\n\nתכונות עיקריות:\n\n• אימות והרשאות מבוססי תפקיד (מחפשי עבודה, מגייסים, מנהלים)\n• חיפוש משרות מתקדם עם סינון ועימוד (מיקום, תפקיד וכו׳)\n• מערכת מעקב אחר הגשות מועמדות עבור מועמדים\n• דשבורד למגייסים לפרסום וניהול מודעות דרושים\n• עמוד “טאלנט” ציבורי שבו מועמדים נבחרים יכולים להציג את הפרופיל שלהם\n• תכנון RESTful API עם זרימת נתונים מובנית בין הלקוח לשרת\n• תכננתי CI pipeline עם GitHub Actions שמריץ בדיקות אוטומטיות כדי למנוע רגרסיות ב־APIs המרכזיים בכל קומיט',
         },
         p1: {
           description:
-            'פיתחתי כלי נגישות קל משקל שנועד לשפר את השימושיות של אתרים עבור משתמשים עם מוגבלויות. הפתרון מספק התאמות UI דינמיות שמשפרות קריאות וניווט, ללא צורך בשינויים בקוד של האתר המקורי.\n\nתכונות עיקריות:\n\n• התאמות נגישות בזמן אמת (לדוגמה: גודל טקסט, ניגודיות, חדות/בהירות)\n• ממשק ידידותי להתאמה מהירה של העדפות תצוגה\n• עובד כשכבת Overlay, כך שניתן לשלב אותו באתרים קיימים\n• דגש על שיפור השימושיות עבור משתמשים עם לקויות ראייה\n\nדגשים טכניים:\n\n• תוכנן כפתרון צד־לקוח גמיש לשילוב קל\n• דגש על ביצועים והשפעה מינימלית על זמן טעינת העמוד\n• נבנה תוך התמקדות בפשטות ובשימושיות פרקטית',
+            'פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.\n\nתכונות עיקריות:\n\n• CRUD לעובדים ולמחלקות, כולל ולידציות וטיפול בקשרים בין ישויות\n• חיפוש, סינון, מיון ועימוד (Pagination) למאגרי נתונים גדולים\n• דשבורד לתובנות וסטטיסטיקות מערכת\n• UI רספונסיבי עם Bootstrap ו־FontAwesome\n• תשתיות מוכנות לפרודקשן: EF Core, לוגים עם Serilog, דיפלוי באמצעות Docker',
         },
         p2: {
-          title: 'פלטפורמת חיפוש עבודה ושוק טאלנטים',
           description:
-            'פלטפורמת חיפוש עבודה מקצה־לקצה שמאפשרת למחפשי עבודה לגלות משרות ולהגיש מועמדות, ובמקביל מאפשרת למגייסים לפרסם, לנהל ולעקוב אחר מודעות דרושים. המערכת כוללת בקרת הרשאות לפי תפקיד (מחפשי עבודה, מגייסים, מנהלים) ותומכת בחשיפה של מועמדים דרך מרקטפלייס ציבורי של טאלנטים.\n\nתכונות עיקריות:\n\n• אימות והרשאות מבוססי תפקיד (מחפשי עבודה, מגייסים, מנהלים)\n• חיפוש משרות מתקדם עם סינון ועימוד (מיקום, תפקיד וכו׳)\n• מערכת מעקב אחר הגשות מועמדות עבור מועמדים\n• דשבורד למגייסים לפרסום וניהול מודעות דרושים\n• עמוד “טאלנט” ציבורי שבו מועמדים נבחרים יכולים להציג את הפרופיל שלהם\n• תכנון RESTful API עם זרימת נתונים מובנית בין הלקוח לשרת',
+            'פיתחתי כלי נגישות קל משקל שנועד לשפר את השימושיות של אתרים עבור משתמשים עם מוגבלויות. הפתרון מספק התאמות UI דינמיות שמשפרות קריאות וניווט, ללא צורך בשינויים בקוד של האתר המקורי.\n\nתכונות עיקריות:\n\n• התאמות נגישות בזמן אמת (לדוגמה: גודל טקסט, ניגודיות, חדות/בהירות)\n• ממשק ידידותי להתאמה מהירה של העדפות תצוגה\n• עובד כשכבת Overlay, כך שניתן לשלב אותו באתרים קיימים\n• דגש על שיפור השימושיות עבור משתמשים עם לקויות ראייה\n\nדגשים טכניים:\n\n• תוכנן כפתרון צד־לקוח גמיש לשילוב קל\n• דגש על ביצועים והשפעה מינימלית על זמן טעינת העמוד\n• נבנה תוך התמקדות בפשטות ובשימושיות פרקטית',
         },
         p3: {
           description:
@@ -261,7 +261,7 @@ export const translations = {
         exp0: {
           role: 'מהנדס תוכנה',
           description:
-            'פיתחתי תשתיות אוטומציה לבדיקות ב־C# וב־SQL כדי לאמת תוכנה שמנהלת נתונים והדמיה רפואיים. שילבתי בדיקות אוטומטיות בצינורות CI ב־Jenkins כדי לתמוך בוולידציה רציפה ובמחזורי שחרור מהירים. עבדתי בצוות אוטומציה ממוקד כדי לעמוד בסטנדרטים מחמירים של ביצועים, דיוק ובטיחות. השתמשתי בכלי AI לשיפור הקוד.',
+            'פיתחתי תשתיות אוטומציה לבדיקות ב־C# וב־SQL כדי לאמת תוכנה שמנהלת נתונים והדמיה רפואיים. שילבתי בדיקות אוטומטיות ב־CI pipelines ב־Jenkins כדי לתמוך בוולידציה רציפה ובמחזורי שחרור מהירים. עבדתי בצוות אוטומציה ממוקד כדי לעמוד בסטנדרטים מחמירים של ביצועים, דיוק ובטיחות. השתמשתי בכלי AI לשיפור הקוד.',
         },
         exp1: {
           role: 'מפתח Backend',
