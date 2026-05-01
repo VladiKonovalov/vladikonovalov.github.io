@@ -13,7 +13,7 @@
   "skills": {
     "Frontend": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
     "Backend": ["Java", "C#", "Python", "REST APIs","Spring Boot","Maven","Gradle"],
-    "Databases": ["MongoDB", "MySQL"],
+    "Databases": ["MongoDB", "MySQL","Redis"],
     "DevOps & Infrastructure": ["Jenkins", "Docker", "Git", "GitHub", "GitHub Actions", "GitHub Pages"],
     "Development & Workflow Tools": ["Cursor","Copilot", "Postman","Swagger","Jira","N8N"]
   },
