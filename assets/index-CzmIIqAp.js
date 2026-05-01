@@ -47,6 +47,7 @@ Key Features:
 • Recruiter dashboard for publishing and managing job listings
 • Public “Talent” page where selected candidates can showcase their profiles
 • RESTful API design with structured data flow between client and server
+• Implemented Redis caching layer with 24-hour TTL for Jobs and Talent pages, serving cached data when available to improve performance and reduce load, with automatic cache invalidation and refresh on data updates
 • Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit`},p1:{description:`Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.
 
 Key Features:
@@ -94,6 +95,7 @@ Technical Highlights:
 • דשבורד למגייסים לפרסום וניהול מודעות דרושים
 • עמוד “טאלנט” ציבורי שבו מועמדים נבחרים יכולים להציג את הפרופיל שלהם
 • תכנון RESTful API עם זרימת נתונים מובנית בין הלקוח לשרת
+• יישמתי שכבת Cache ב־Redis עם TTL של 24 שעות עבור עמודי Jobs ו־Talent, שמגישה נתונים מהמטמון כשזמין כדי לשפר ביצועים ולהפחית עומס, עם ביטול תוקף אוטומטי ורענון בעת עדכוני נתונים
 • תכננתי CI pipeline עם GitHub Actions שמריץ בדיקות אוטומטיות כדי למנוע רגרסיות ב־APIs המרכזיים בכל קומיט`},p1:{description:`פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.
 
 תכונות עיקריות:
@@ -141,7 +143,8 @@ Key Features:
 • Recruiter dashboard for publishing and managing job listings
 • Public “Talent” page where selected candidates can showcase their profiles
 • RESTful API design with structured data flow between client and server
-• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit`,liveUrl:"https://alhaset.co.il/",repoUrl:"https://alhaset.co.il/",image:"/images/project1.jpg",technologies:["Java","Spring Boot","Docker","JavaScript","MongoDB","Stripe"],repoPrivate:!0},{title:"Employee Management System",description:`Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.
+• Implemented Redis caching layer with 24-hour TTL for Jobs and Talent pages, serving cached data when available to improve performance and reduce load, with automatic cache invalidation and refresh on data updates
+• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit`,liveUrl:"https://alhaset.co.il/",repoUrl:"https://alhaset.co.il/",image:"/images/project1.jpg",technologies:["Java","Spring Boot","Docker","JavaScript","MongoDB","Stripe","Redis"],repoPrivate:!0},{title:"Employee Management System",description:`Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.
 
 Key Features:
 
