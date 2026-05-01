@@ -2,11 +2,11 @@
 
   {
     "title": "Job Search & Talent Platform",
-    "description": "Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server\n• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit",
+    "description": "Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server\n• Implemented Redis caching layer with 24-hour TTL for Jobs and Talent pages, serving cached data when available to improve performance and reduce load, with automatic cache invalidation and refresh on data updates\n• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit",
     "liveUrl": "https://alhaset.co.il/",
     "repoUrl": "https://alhaset.co.il/",
     "image": "/images/project1.jpg",
-    "technologies": ["Java", "Spring Boot", "Docker", "JavaScript", "MongoDB", "Stripe"],
+    "technologies": ["Java", "Spring Boot", "Docker", "JavaScript", "MongoDB", "Stripe", "Redis"],
     "repoPrivate": true
   },
   {
