@@ -113,31 +113,36 @@ export const translations = {
       present: 'Present',
       items: {
         exp0: {
+          role: 'Software Architect / Full Stack',
+          description:
+            'Design and develop end-to-end software platforms and AI-powered solutions for multiple clients and personal projects. Architect scalable systems, build responsive web applications and backend services, implement CI/CD pipelines, integrate cloud and third-party services (OpenAI, Claude, Cloudflare R2, APIs), and manage databases and production deployments using Java, Spring Boot, React, Node.js, TypeScript, JavaScript, MongoDB, PostgreSQL, Redis, Docker, and REST APIs. Accelerate development, debugging, testing, and developing AI agents using AI-assisted engineering tools including Cursor and Claude Code.',
+        },
+        exp1: {
           role: 'Software Engineer',
           description:
             'Developed test automation infrastructure in C# and SQL to validate software managing medical data and imaging. Integrated automated tests into CI pipelines using Jenkins to support continuous validation and fast release cycles. Collaborated in a focused automation team to meet strict healthcare standards for performance, accuracy, and safety. Used AI tools to improve our code.',
         },
-        exp1: {
+        exp2: {
           role: 'Backend Developer',
           description:
             'Built and maintained scalable microservices with Docker, MongoDB, and RESTful APIs. Created internal tools and services to support developer workflows, including a DB verification utility to detect data drift between branches and production. Developed multi-threaded backend features in Java using Spring Boot for a cloud-based DDoS prevention platform. Created Python scripts to streamline developer workflows and support CI/CD processes. Designed and implemented new RESTful APIs to enhance performance and maintainability. Collaborated with cross-functional teams to deliver new product features in fast-paced agile sprints.',
         },
-        exp2: {
+        exp3: {
           role: 'Senior Automation Engineer / Project Owner',
           description:
             'Designed and built an API test automation infrastructure from scratch in Java, with Jenkins pipelines and automated reporting in cloud environments. Mentored a new team member to contribute effectively. Ensured production stability by proactively fixing critical bugs in high-availability systems. Reduced manual QA effort by 85% on core tests, increased test coverage, and enabled faster biweekly release cycles.',
         },
-        exp3: {
+        exp4: {
           role: 'Automation Engineer',
           description:
             'Worked on AWS-based microservices with Java & Maven. Enhanced microservice test performance using Jenkins pipelines. Verified REST APIs using Postman and Swagger documentation. Analyzed logs and metrics via Datadog to improve system testing, and used Python scripts.',
         },
-        exp4: {
+        exp5: {
           role: 'Full-Stack Developer',
           description:
             'Worked as a full-stack developer on .NET. Frontend: HTML5, JavaScript. Backend: C#. Created and improved queries and stored procedures in databases such as MySQL.',
         },
-        exp5: {
+        exp6: {
           role: 'Manual QA Engineer',
           description:
             'Performed functional and regression testing of electronic and digital signature products. Utilized VMware environments and SQLite databases to replicate user scenarios and validate data integrity. Executed detailed test cases, reported bugs, and collaborated with development teams to ensure high-quality product releases.',
@@ -259,31 +264,36 @@ export const translations = {
       present: 'היום',
       items: {
         exp0: {
+          role: 'ארכיטקט תוכנה / Full Stack',
+          description:
+            'מתכנן ומפתח פלטפורמות תוכנה מקצה לקצה ופתרונות מבוססי AI עבור לקוחות ופרויקטים אישיים. מתכנן מערכות סקיילביליות, בונה אפליקציות ווב רספונסיביות ושירותי Backend, מיישם CI/CD, משלב שירותי ענן וצד שלישי (OpenAI, Claude, Cloudflare R2, APIs), ומנהל מסדי נתונים ופריסות Production עם Java, Spring Boot, React, Node.js, TypeScript, JavaScript, MongoDB, PostgreSQL, Redis, Docker ו־REST APIs. מאיץ פיתוח, דיבוג, בדיקות ופיתוח סוכני AI בעזרת כלי הנדסה מבוססי AI כולל Cursor ו־Claude Code.',
+        },
+        exp1: {
           role: 'מהנדס תוכנה',
           description:
             'פיתחתי תשתיות אוטומציה לבדיקות ב־C# וב־SQL כדי לאמת תוכנה שמנהלת נתונים והדמיה רפואיים. שילבתי בדיקות אוטומטיות ב־CI pipelines ב־Jenkins כדי לתמוך בוולידציה רציפה ובמחזורי שחרור מהירים. עבדתי בצוות אוטומציה ממוקד כדי לעמוד בסטנדרטים מחמירים של ביצועים, דיוק ובטיחות. השתמשתי בכלי AI לשיפור הקוד.',
         },
-        exp1: {
+        exp2: {
           role: 'מפתח Backend',
           description:
             'בניתי ותחזקתי מיקרו־שירותים סקיילביליים עם Docker, MongoDB ו־REST APIs. פיתחתי כלים ושירותים פנימיים לשיפור תהליכי עבודה של מפתחים, כולל כלי אימות DB לזיהוי סטיות נתונים בין ענפים וסביבת Production. פיתחתי יכולות Backend רב־תהליכיות ב־Java עם Spring Boot עבור פלטפורמת מניעת DDoS בענן. כתבתי סקריפטים ב־Python לאוטומציה של תהליכים ותמיכה ב־CI/CD. תכננתי ומימשתי REST APIs חדשים לשיפור ביצועים ותחזוקתיות, ושיתפתי פעולה עם צוותים שונים בספרינטים אג׳יליים מהירים.',
         },
-        exp2: {
+        exp3: {
           role: 'מהנדס אוטומציה בכיר / בעל מוצר',
           description:
             'תכננתי ובניתי מאפס תשתית אוטומציה לבדיקות API ב־Java, כולל Pipelines ב־Jenkins ודוחות אוטומטיים בסביבות ענן. ליוויתי חבר צוות חדש עד שהצליח לתרום באופן עצמאי. שמרתי על יציבות Production באמצעות טיפול פרואקטיבי בתקלות קריטיות במערכות HA. צמצמתי עבודה ידנית של QA ב־85% בבדיקות ליבה, הגדלתי כיסוי בדיקות ואפשרתי מחזורי שחרור דו־שבועיים מהירים יותר.',
         },
-        exp3: {
+        exp4: {
           role: 'מהנדס אוטומציה',
           description:
             'עבדתי על מיקרו־שירותים מבוססי AWS עם Java ו־Maven. שיפרתי ביצועי בדיקות בעזרת Pipelines ב־Jenkins. אימתתי REST APIs באמצעות Postman ותיעוד Swagger. ניתחתי לוגים ומדדים ב־Datadog לשיפור בדיקות המערכת, והשתמשתי בסקריפטים ב־Python לאוטומציה.',
         },
-        exp4: {
+        exp5: {
           role: 'מפתח Full-Stack',
           description:
             'עבדתי כמפתח Full-Stack על .NET כחלק מצוות R&D. Frontend: HTML5 ו־JavaScript. Backend: C#. יצרתי ושיפרתי שאילתות ו־Stored Procedures במסדי נתונים כגון MySQL.',
         },
-        exp5: {
+        exp6: {
           role: 'בודק QA ידני',
           description:
             'ביצעתי בדיקות פונקציונליות ורגרסיה למוצרי חתימה דיגיטלית ואלקטרונית. השתמשתי בסביבות VMware וב־SQLite כדי לשחזר תרחישי משתמשים ולאמת תקינות נתונים. הרצתי תרחישי בדיקה מפורטים, דיווחתי על תקלות, ושיתפתי פעולה עם צוותי הפיתוח כדי להבטיח איכות גבוהה לפני שחרורים.',
