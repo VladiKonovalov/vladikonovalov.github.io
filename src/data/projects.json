@@ -19,11 +19,11 @@
   },
   {
     "title": "Accessify",
-    "description": "Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability",
+    "description": "Developed Accessify V2 — a modular web accessibility toolbar supporting WCAG 2.1 AA and Israeli Standard 5568. Drop-in client-side toolkit that lets users customize readability and navigation without changing the host site’s code. Supports RTL (e.g. Hebrew) and multiple languages.\n\nKey Features:\n\n• Text size control (80%–200%)\n• Contrast modes (Normal / High / Dark)\n• Spacing and dyslexia-friendly font options\n• Link highlighting and enhanced cursor focus circle\n• Color adjustments (grayscale, sepia, invert)\n• Multilingual UI with optional sync to page language/dir\n• Settings persisted in localStorage; show/hide tools per control\n\nTechnical Highlights:\n\n• ToolbarV2 API with configurable availableControls and syncWithPageLanguage\n• Distributed via npm and CDN (jsDelivr); TypeScript types included\n• Built with Rollup; Jest test suite including a11y-focused tests\n• Lightweight overlay with minimal impact on page load",
     "liveUrl": "https://vladikonovalov.github.io/Accessify/example.html",
     "repoUrl": "https://github.com/VladiKonovalov/Accessify",
     "image": "https://www.youtube.com/watch?v=yC6a5V_RaYg",
-    "technologies": ["JavaScript", "HTML", "CSS", "Accessibility (a11y)"]
+    "technologies": ["JavaScript", "TypeScript", "HTML", "CSS", "Rollup", "Jest", "WCAG 2.1 AA", "Accessibility (a11y)"]
   },
   {
     "title": "Portfolio Website",

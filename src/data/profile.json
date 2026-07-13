@@ -19,6 +19,12 @@
   },
   "experience": [
     {
+      "company": "Freelance",
+      "role": "Software Architect / Full Stack",
+      "period": "2026 - Present",
+      "description": "Design and develop end-to-end software platforms and AI-powered solutions for multiple clients and personal projects. Architect scalable systems, build responsive web applications and backend services, implement CI/CD pipelines, integrate cloud and third-party services (OpenAI, Claude, Cloudflare R2, APIs), and manage databases and production deployments using Java, Spring Boot, React, Node.js, TypeScript, JavaScript, MongoDB, PostgreSQL, Redis, Docker, and REST APIs. Accelerate development, debugging, testing, and developing AI agents and using AI-assisted engineering tools including Cursor and Claude Code."
+    },
+    {
       "company": "Matrix.",
       "role": "Software Engineer",
       "period": "2024 - Present",
