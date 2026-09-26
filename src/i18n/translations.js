@@ -45,6 +45,7 @@ export const translations = {
       visitLinkedIn: 'LinkedIn',
       viewGithub: 'GitHub',
       stackOverflow: 'Stack Overflow',
+      x: 'X',
     },
     footer: {
       rights: 'All rights reserved.',
@@ -81,29 +82,35 @@ export const translations = {
     projectCard: {
       loadingVideo: 'Loading video...',
       watchOnYouTube: 'Watch on YouTube',
-      liveDemo: 'Live Demo',
+      liveDemo: 'Visit Website',
+      download: 'Download',
       code: 'Code',
     },
     projects: {
       items: {
         p0: {
-          title: 'Job Search & Talent Platform',
+          title: 'Sleepy - Smart Voice Assistant',
           description:
-            'Built a full-stack job platform that enables job seekers to discover and apply for opportunities, while recruiters can publish, manage, and track job listings. The system includes role-based access control (job seekers, recruiters, admins) and supports candidate visibility through a public talent marketplace.\n\nKey Features:\n\n• Role-based authentication and authorization (job seekers, recruiters, admin)\n• Advanced job search with filtering and pagination (location, title, etc.)\n• Job application tracking system for candidates\n• Recruiter dashboard for publishing and managing job listings\n• Public “Talent” page where selected candidates can showcase their profiles\n• RESTful API design with structured data flow between client and server\n• Implemented Redis caching layer with 24-hour TTL for Jobs and Talent pages, serving cached data when available to improve performance and reduce load, with automatic cache invalidation and refresh on data updates\n• Designed a CI pipeline with GitHub Actions executing automated tests to prevent regressions in core APIs on each commit',
+            'Built a Windows desktop productivity application that helps users stay focused while watching videos by monitoring inactivity and interacting with the user through voice and audio notifications.\n\nKey Features:\n\n• Automatic inactivity detection and configurable sleep timer\n• Voice-based “Are you awake?” interaction with speech recognition\n• Automatically pauses videos when the user becomes inactive\n• Resumes playback only after confirming the user is awake\n• Audio notifications with configurable volume control\n• Configurable timers, detection behavior, and application settings\n• Modular Python architecture designed for reliable background operation',
         },
         p1: {
+          title: 'AlHaset Job Talent Platform',
           description:
-            'Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment',
+            'Built a full-stack platform connecting creative professionals with jobs, projects, and hiring opportunities. The platform includes job discovery and applications, a public talent marketplace, photography requests, and automated email alerts for relevant opportunities.\n\nKey Features:\n\n• Role-based authentication and authorization (talents, employers, admins)\n• Job search with filtering, pagination, categories, and Last Minute opportunities\n• Public talent marketplace for discovering creative professionals\n• Job application and management workflows\n• Photography request and offer system for clients and photographers\n• Automated email alerts for relevant jobs and opportunities\n• Admin dashboard for managing users, jobs, requests, and platform activity\n• RESTful Spring Boot API with MongoDB and Redis caching\n• GitHub Actions CI pipeline with automated API tests',
         },
         p2: {
           description:
-            'Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability',
+            'Developed a full-stack employee management system in ASP.NET Core 8 with a clean layered architecture for scalable, maintainable CRUD workflows across employees and departments.\n\nKey Features:\n\n• CRUD for employees and departments with validation and relationship handling\n• Search, filtering, sorting, and pagination for large datasets\n• Dashboard-style insights and statistics\n• Responsive UI with Bootstrap and FontAwesome\n• Production-ready plumbing: EF Core, Serilog logging, Dockerized deployment',
         },
         p3: {
           description:
-            'Developed a modern, responsive portfolio website using React, Vite, and Tailwind CSS, designed to showcase projects and technical skills with a focus on performance, accessibility, and user experience.\n\nKey Features:\n\n• Dark/light mode with persistent user preferences\n• Fully responsive, mobile-first design across all screen sizes\n• Smooth scrolling navigation with subtle animations and transitions\n• Lazy loading for images and sections to improve performance\n• SEO optimization including meta tags, Open Graph, and social sharing support\n• Accessible design using semantic HTML and ARIA attributes\n\nTechnical Highlights:\n\n• Built with React 18 and optimized using Vite for fast load times\n• Styled with Tailwind CSS for scalable and maintainable UI development\n• Deployed via GitHub Pages with automated build configuration\n• Focused on performance optimization and clean component structure',
+            'Developed a lightweight accessibility tool designed to improve website usability for users with disabilities. The solution provides dynamic UI adjustments that enhance readability and navigation without requiring changes to the original website code.\n\nKey Features:\n\n• Real-time accessibility adjustments (e.g., text size, contrast, visual clarity)\n• User-friendly interface for quick customization of viewing preferences\n• Works as an overlay layer, allowing integration with existing websites\n• Focus on improving usability for visually impaired users\n\nTechnical Highlights:\n\n• Designed as a flexible client-side solution for easy integration\n• Emphasized performance and minimal impact on page load\n• Built with a focus on simplicity and practical usability',
         },
         p4: {
+          description:
+            'Developed a modern, responsive portfolio website using React, Vite, and Tailwind CSS, designed to showcase projects and technical skills with a focus on performance, accessibility, and user experience.\n\nKey Features:\n\n• Dark/light mode with persistent user preferences\n• Fully responsive, mobile-first design across all screen sizes\n• Smooth scrolling navigation with subtle animations and transitions\n• Lazy loading for images and sections to improve performance\n• SEO optimization including meta tags, Open Graph, and social sharing support\n• Accessible design using semantic HTML and ARIA attributes\n\nTechnical Highlights:\n\n• Built with React 18 and optimized using Vite for fast load times\n• Styled with Tailwind CSS for scalable and maintainable UI development\n• Deployed via GitHub Pages with automated build configuration\n• Focused on performance optimization and clean component structure',
+        },
+        p5: {
           description:
             'This project demonstrates automated testing of a login functionality using Appium and Selenium. The tests are designed to run on an Android device using the Chrome browser',
         },
@@ -196,6 +203,7 @@ export const translations = {
       visitLinkedIn: 'לינקדאין',
       viewGithub: 'גיטהאב',
       stackOverflow: 'סטאק אוברפלואו',
+      x: 'X',
     },
     footer: {
       rights: 'כל הזכויות שמורות.',
@@ -232,29 +240,35 @@ export const translations = {
     projectCard: {
       loadingVideo: 'טוען וידאו...',
       watchOnYouTube: 'צפה ביוטיוב',
-      liveDemo: 'הדגמה',
+      liveDemo: 'בקרו באתר',
+      download: 'הורדה',
       code: 'קוד',
     },
     projects: {
       items: {
         p0: {
-          title: 'פלטפורמת חיפוש עבודה ושוק טאלנטים',
+          title: 'Sleepy - עוזר קולי חכם',
           description:
-            'פלטפורמת חיפוש עבודה מקצה־לקצה שמאפשרת למחפשי עבודה לגלות משרות ולהגיש מועמדות, ובמקביל מאפשרת למגייסים לפרסם, לנהל ולעקוב אחר מודעות דרושים. המערכת כוללת בקרת הרשאות לפי תפקיד (מחפשי עבודה, מגייסים, מנהלים) ותומכת בחשיפה של מועמדים דרך מרקטפלייס ציבורי של טאלנטים.\n\nתכונות עיקריות:\n\n• אימות והרשאות מבוססי תפקיד (מחפשי עבודה, מגייסים, מנהלים)\n• חיפוש משרות מתקדם עם סינון ועימוד (מיקום, תפקיד וכו׳)\n• מערכת מעקב אחר הגשות מועמדות עבור מועמדים\n• דשבורד למגייסים לפרסום וניהול מודעות דרושים\n• עמוד “טאלנט” ציבורי שבו מועמדים נבחרים יכולים להציג את הפרופיל שלהם\n• תכנון RESTful API עם זרימת נתונים מובנית בין הלקוח לשרת\n• יישמתי שכבת Cache ב־Redis עם TTL של 24 שעות עבור עמודי Jobs ו־Talent, שמגישה נתונים מהמטמון כשזמין כדי לשפר ביצועים ולהפחית עומס, עם ביטול תוקף אוטומטי ורענון בעת עדכוני נתונים\n• תכננתי CI pipeline עם GitHub Actions שמריץ בדיקות אוטומטיות כדי למנוע רגרסיות ב־APIs המרכזיים בכל קומיט',
+            'בניתי אפליקציית דסקטופ ל־Windows לפרודוקטיביות, שעוזרת למשתמשים להישאר ממוקדים בזמן צפייה בסרטונים על ידי זיהוי חוסר פעילות ואינטראקציה קולית והתראות שמע.\n\nתכונות עיקריות:\n\n• זיהוי אוטומטי של חוסר פעילות וטיימר שינה הניתן להגדרה\n• אינטראקציה קולית של "אתה ער?" עם זיהוי דיבור\n• השהייה אוטומטית של סרטונים כשהמשתמש אינו פעיל\n• חידוש הניגון רק לאחר אישור שהמשתמש ער\n• התראות שמע עם שליטה בעוצמת הקול\n• טיימרים, התנהגות זיהוי והגדרות אפליקציה הניתנים להתאמה\n• ארכיטקטורת Python מודולרית שתוכננה לפעולה אמינה ברקע',
         },
         p1: {
+          title: 'על הסט פלטפורמה לאנשי יצירה',
           description:
-            'פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.\n\nתכונות עיקריות:\n\n• CRUD לעובדים ולמחלקות, כולל ולידציות וטיפול בקשרים בין ישויות\n• חיפוש, סינון, מיון ועימוד (Pagination) למאגרי נתונים גדולים\n• דשבורד לתובנות וסטטיסטיקות מערכת\n• UI רספונסיבי עם Bootstrap ו־FontAwesome\n• תשתיות מוכנות לפרודקשן: EF Core, לוגים עם Serilog, דיפלוי באמצעות Docker',
+            'בניתי פלטפורמה מקצה לקצה שמחברת אנשי מקצוע יצירתיים עם משרות, פרויקטים והזדמנויות גיוס. הפלטפורמה כוללת גילוי משרות והגשת מועמדות, מרקטפלייס ציבורי של טאלנטים, בקשות צילום והתראות אימייל אוטומטיות על הזדמנויות רלוונטיות.\n\nתכונות עיקריות:\n\n• אימות והרשאות מבוססי תפקיד (טאלנטים, מעסיקים, מנהלים)\n• חיפוש משרות עם סינון, עימוד, קטגוריות והזדמנויות Last Minute\n• מרקטפלייס ציבורי לגילוי אנשי מקצוע יצירתיים\n• תהליכי הגשת מועמדות וניהול משרות\n• מערכת בקשות והצעות צילום ללקוחות ולצלמים\n• התראות אימייל אוטומטיות על משרות והזדמנויות רלוונטיות\n• דשבורד ניהול למשתמשים, משרות, בקשות ופעילות הפלטפורמה\n• RESTful Spring Boot API עם MongoDB ומטמון Redis\n• צינור CI ב־GitHub Actions עם בדיקות API אוטומטיות',
         },
         p2: {
           description:
-            'פיתחתי כלי נגישות קל משקל שנועד לשפר את השימושיות של אתרים עבור משתמשים עם מוגבלויות. הפתרון מספק התאמות UI דינמיות שמשפרות קריאות וניווט, ללא צורך בשינויים בקוד של האתר המקורי.\n\nתכונות עיקריות:\n\n• התאמות נגישות בזמן אמת (לדוגמה: גודל טקסט, ניגודיות, חדות/בהירות)\n• ממשק ידידותי להתאמה מהירה של העדפות תצוגה\n• עובד כשכבת Overlay, כך שניתן לשלב אותו באתרים קיימים\n• דגש על שיפור השימושיות עבור משתמשים עם לקויות ראייה\n\nדגשים טכניים:\n\n• תוכנן כפתרון צד־לקוח גמיש לשילוב קל\n• דגש על ביצועים והשפעה מינימלית על זמן טעינת העמוד\n• נבנה תוך התמקדות בפשטות ובשימושיות פרקטית',
+            'פיתחתי מערכת מקצה־לקצה לניהול עובדים ב־ASP.NET Core 8 עם ארכיטקטורה שכבתית נקייה, המאפשרת תהליכי CRUD סקיילביליים ותחזוקתיים עבור עובדים ומחלקות.\n\nתכונות עיקריות:\n\n• CRUD לעובדים ולמחלקות, כולל ולידציות וטיפול בקשרים בין ישויות\n• חיפוש, סינון, מיון ועימוד (Pagination) למאגרי נתונים גדולים\n• דשבורד לתובנות וסטטיסטיקות מערכת\n• UI רספונסיבי עם Bootstrap ו־FontAwesome\n• תשתיות מוכנות לפרודקשן: EF Core, לוגים עם Serilog, דיפלוי באמצעות Docker',
         },
         p3: {
           description:
-            'פיתחתי אתר תיק עבודות מודרני ורספונסיבי באמצעות React, Vite ו־Tailwind CSS, שנועד להציג פרויקטים וכישורים טכניים תוך דגש על ביצועים, נגישות וחוויית משתמש.\n\nתכונות עיקריות:\n\n• מצב כהה/בהיר עם שמירת העדפות משתמש באופן מתמשך\n• עיצוב רספונסיבי בגישת Mobile-first לכל גדלי המסכים\n• ניווט בגלילה חלקה עם אנימציות עדינות ומעברים\n• טעינה עצלה (Lazy loading) לתמונות ולסקשנים לשיפור ביצועים\n• אופטימיזציית SEO כולל תגיות מטא, Open Graph ותמיכה בשיתוף ברשתות חברתיות\n• עיצוב נגיש באמצעות HTML סמנטי ותכונות ARIA\n\nדגשים טכניים:\n\n• נבנה עם React 18 ואופטימיזציה באמצעות Vite לזמני טעינה מהירים\n• עוצב עם Tailwind CSS לפיתוח UI סקיילבילי וקל לתחזוקה\n• דיפלוי באמצעות GitHub Pages עם תצורת בילד אוטומטית\n• דגש על אופטימיזציית ביצועים ומבנה קומפוננטות נקי',
+            'פיתחתי כלי נגישות קל משקל שנועד לשפר את השימושיות של אתרים עבור משתמשים עם מוגבלויות. הפתרון מספק התאמות UI דינמיות שמשפרות קריאות וניווט, ללא צורך בשינויים בקוד של האתר המקורי.\n\nתכונות עיקריות:\n\n• התאמות נגישות בזמן אמת (לדוגמה: גודל טקסט, ניגודיות, חדות/בהירות)\n• ממשק ידידותי להתאמה מהירה של העדפות תצוגה\n• עובד כשכבת Overlay, כך שניתן לשלב אותו באתרים קיימים\n• דגש על שיפור השימושיות עבור משתמשים עם לקויות ראייה\n\nדגשים טכניים:\n\n• תוכנן כפתרון צד־לקוח גמיש לשילוב קל\n• דגש על ביצועים והשפעה מינימלית על זמן טעינת העמוד\n• נבנה תוך התמקדות בפשטות ובשימושיות פרקטית',
         },
         p4: {
+          description:
+            'פיתחתי אתר תיק עבודות מודרני ורספונסיבי באמצעות React, Vite ו־Tailwind CSS, שנועד להציג פרויקטים וכישורים טכניים תוך דגש על ביצועים, נגישות וחוויית משתמש.\n\nתכונות עיקריות:\n\n• מצב כהה/בהיר עם שמירת העדפות משתמש באופן מתמשך\n• עיצוב רספונסיבי בגישת Mobile-first לכל גדלי המסכים\n• ניווט בגלילה חלקה עם אנימציות עדינות ומעברים\n• טעינה עצלה (Lazy loading) לתמונות ולסקשנים לשיפור ביצועים\n• אופטימיזציית SEO כולל תגיות מטא, Open Graph ותמיכה בשיתוף ברשתות חברתיות\n• עיצוב נגיש באמצעות HTML סמנטי ותכונות ARIA\n\nדגשים טכניים:\n\n• נבנה עם React 18 ואופטימיזציה באמצעות Vite לזמני טעינה מהירים\n• עוצב עם Tailwind CSS לפיתוח UI סקיילבילי וקל לתחזוקה\n• דיפלוי באמצעות GitHub Pages עם תצורת בילד אוטומטית\n• דגש על אופטימיזציית ביצועים ומבנה קומפוננטות נקי',
+        },
+        p5: {
           description:
             'פרויקט שמדגים בדיקות אוטומטיות לפונקציונליות התחברות באמצעות Appium ו־Selenium. הבדיקות מיועדות לריצה על מכשיר Android באמצעות דפדפן Chrome.',
         },
