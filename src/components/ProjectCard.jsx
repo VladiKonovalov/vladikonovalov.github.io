@@ -157,6 +157,16 @@ export default function ProjectCard({ project }) {
               {isYouTubeUrl(project.liveUrl) ? t('projectCard.watchOnYouTube') : t('projectCard.liveDemo')}
             </a>
           )}
+          {project.downloadUrl && (
+            <a
+              href={project.downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-sm flex-shrink-0 inline-flex items-center justify-center"
+            >
+              {t('projectCard.download')}
+            </a>
+          )}
           {project.repoUrl && !project.repoPrivate && (
             <a
               href={project.repoUrl}
