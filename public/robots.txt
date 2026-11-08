@@ -1,4 +1,8 @@
+User-agent: Googlebot
+Allow: /
+
 User-agent: *
 Allow: /
 
 Sitemap: https://vladikonovalov.github.io/sitemap.xml
+Sitemap: https://vladikonovalov.github.io/sitemap.txt
