@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect, useId } from 'react'
 import { useI18n } from '../i18n/useI18n'
 
 // Helper function to extract YouTube video ID from URL
@@ -25,11 +25,15 @@ const isYouTubeUrl = (url) => {
 }
 
 export default function ProjectCard({ project }) {
-  const { t } = useI18n()
+  const { t, language } = useI18n()
   const [isVisible, setIsVisible] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
   const [youtubeLoaded, setYoutubeLoaded] = useState(false)
+  const [expanded, setExpanded] = useState(false)
+  const [overflows, setOverflows] = useState(false)
   const cardRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const descriptionId = useId()
   // Check both liveUrl and image fields for YouTube URLs
   const youtubeVideoIdFromLiveUrl = project.liveUrl ? getYouTubeVideoId(project.liveUrl) : null
   const youtubeVideoIdFromImage = project.image ? getYouTubeVideoId(project.image) : null
@@ -56,14 +60,58 @@ export default function ProjectCard({ project }) {
     return () => observer.disconnect()
   }, [])
 
+  const description = (() => {
+    const key = `projects.items.${project._i18nId}.description`
+    const translated = t(key)
+    return translated === key ? project.description : translated
+  })()
+
+  const title = (() => {
+    const key = `projects.items.${project._i18nId}.title`
+    const translated = t(key)
+    return translated === key ? project.title : translated
+  })()
+
+  useLayoutEffect(() => {
+    const el = descriptionRef.current
+    if (!el || expanded) return
+
+    const measure = () => {
+      const clone = el.cloneNode(true)
+      clone.classList.remove('line-clamp-4', 'min-h-20')
+      clone.style.position = 'fixed'
+      clone.style.left = '0'
+      clone.style.top = '0'
+      clone.style.visibility = 'hidden'
+      clone.style.pointerEvents = 'none'
+      clone.style.height = 'auto'
+      clone.style.minHeight = '0'
+      clone.style.overflow = 'visible'
+      clone.style.display = 'block'
+      clone.style.webkitLineClamp = 'unset'
+      clone.style.width = `${el.clientWidth}px`
+      el.parentElement.appendChild(clone)
+      const fullHeight = clone.getBoundingClientRect().height
+      clone.remove()
+
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight) || 20
+      setOverflows(fullHeight > lineHeight * 4 + 1)
+    }
+
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [description, expanded, language])
+
   return (
     <div
       ref={cardRef}
-      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+      className={`flex h-full min-w-0 flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 lg:min-h-[22rem] ${
         isVisible ? 'animate-fade-in' : 'opacity-0'
       }`}
     >
-      <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+      <div className="relative h-40 lg:h-20 shrink-0 bg-gray-200 dark:bg-gray-700 overflow-hidden">
         {showYouTube ? (
           <div className="w-full h-full relative">
             {!youtubeLoaded && (
@@ -115,34 +163,45 @@ export default function ProjectCard({ project }) {
           </div>
         )}
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-          {(() => {
-            const key = `projects.items.${project._i18nId}.title`
-            const translated = t(key)
-            return translated === key ? project.title : translated
-          })()}
+      <div className="flex flex-1 flex-col p-4 lg:p-3">
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 lg:text-base lg:leading-5">
+          {title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 whitespace-pre-line">
-          {(() => {
-            const key = `projects.items.${project._i18nId}.description`
-            const translated = t(key)
-            return translated === key ? project.description : translated
-          })()}
+        <p
+          ref={descriptionRef}
+          id={descriptionId}
+          className={`text-sm leading-5 text-gray-600 dark:text-gray-300 whitespace-pre-line ${
+            expanded ? '' : 'line-clamp-4 min-h-20'
+          }`}
+        >
+          {description}
         </p>
+        <div className="mt-1 min-h-6">
+          {(overflows || expanded) && (
+            <button
+              type="button"
+              className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              aria-expanded={expanded}
+              aria-controls={descriptionId}
+              onClick={() => setExpanded((open) => !open)}
+            >
+              {expanded ? t('projectCard.seeLess') : t('projectCard.seeMore')}
+            </button>
+          )}
+        </div>
         {project.technologies && project.technologies.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="mt-2 flex flex-wrap gap-1.5 lg:gap-1">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full"
+                className="px-2.5 py-0.5 text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full"
               >
                 {tech}
               </span>
             ))}
           </div>
         )}
-        <div className="flex gap-4 flex-wrap">
+        <div className="mt-auto flex gap-2 flex-wrap pt-2 lg:[&_a]:!px-3 lg:[&_a]:!py-1.5">
           {project.liveUrl && (
             <a
               href={project.liveUrl}

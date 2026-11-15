@@ -13,10 +13,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="section-container bg-gray-50 dark:bg-gray-800"
+      className="section-container bg-gray-50 dark:bg-gray-800 lg:py-5"
     >
-      <h2 className="section-title">{t('sections.projects')}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="section-title lg:mb-4">{t('sections.projects')}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4">
         {projectsWithIds.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

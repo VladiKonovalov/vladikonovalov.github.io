@@ -85,6 +85,8 @@ export const translations = {
       liveDemo: 'Visit Website',
       download: 'Download',
       code: 'Code',
+      seeMore: 'See more',
+      seeLess: 'See less',
     },
     projects: {
       items: {
@@ -243,6 +245,8 @@ export const translations = {
       liveDemo: 'בקרו באתר',
       download: 'הורדה',
       code: 'קוד',
+      seeMore: 'הצג עוד',
+      seeLess: 'הצג פחות',
     },
     projects: {
       items: {

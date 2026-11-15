@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <section id="contact" className="section-container bg-white dark:bg-gray-900">
       <h2 className="section-title">{t('sections.contact')}</h2>
-      <div className="max-w-2xl mx-auto text-center">
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">{t('contact.intro')}</p>
+      <div className="mx-auto text-center">
+        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 mb-8">{t('contact.intro')}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
           <ContactForm />
           <a
