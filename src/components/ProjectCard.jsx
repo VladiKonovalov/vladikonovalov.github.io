@@ -78,7 +78,7 @@ export default function ProjectCard({ project }) {
 
     const measure = () => {
       const clone = el.cloneNode(true)
-      clone.classList.remove('line-clamp-4', 'min-h-20')
+      clone.classList.remove('line-clamp-4', 'min-h-[7rem]')
       clone.style.position = 'fixed'
       clone.style.left = '0'
       clone.style.top = '0'
@@ -107,11 +107,11 @@ export default function ProjectCard({ project }) {
   return (
     <div
       ref={cardRef}
-      className={`flex h-full min-w-0 flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 lg:min-h-[22rem] ${
+      className={`flex h-full min-w-0 flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
         isVisible ? 'animate-fade-in' : 'opacity-0'
       }`}
     >
-      <div className="relative h-40 lg:h-20 shrink-0 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+      <div className="relative h-48 shrink-0 bg-gray-200 dark:bg-gray-700 overflow-hidden">
         {showYouTube ? (
           <div className="w-full h-full relative">
             {!youtubeLoaded && (
@@ -163,20 +163,20 @@ export default function ProjectCard({ project }) {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col p-4 lg:p-3">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 lg:text-base lg:leading-5">
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 leading-snug">
           {title}
         </h3>
         <p
           ref={descriptionRef}
           id={descriptionId}
-          className={`text-sm leading-5 text-gray-600 dark:text-gray-300 whitespace-pre-line ${
-            expanded ? '' : 'line-clamp-4 min-h-20'
+          className={`text-base leading-7 [word-spacing:0.06em] text-gray-600 dark:text-gray-300 whitespace-pre-line ${
+            expanded ? '' : 'line-clamp-4 min-h-[7rem]'
           }`}
         >
           {description}
         </p>
-        <div className="mt-1 min-h-6">
+        <div className="mt-3 min-h-6">
           {(overflows || expanded) && (
             <button
               type="button"
@@ -190,18 +190,18 @@ export default function ProjectCard({ project }) {
           )}
         </div>
         {project.technologies && project.technologies.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1.5 lg:gap-1">
+          <div className="mt-4 flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-2.5 py-0.5 text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full"
+                className="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full"
               >
                 {tech}
               </span>
             ))}
           </div>
         )}
-        <div className="mt-auto flex gap-2 flex-wrap pt-2 lg:[&_a]:!px-3 lg:[&_a]:!py-1.5">
+        <div className="mt-auto flex gap-3 flex-wrap pt-8 [&_a]:!px-6 [&_a]:!py-3 [&_a]:!text-base">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
